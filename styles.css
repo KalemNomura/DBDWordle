@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000;
+    background-image: url('imgs/background.webp'); /* Updated path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjust as needed */
+}
+.container {
+    width: 500px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 10px; /* Adjusted */
+}
+.logo img {
+    height: auto;
+    max-width: 100px;
+    vertical-align: middle;
+}
+.icons {
+    margin-bottom: 20px;
+}
+.icons i {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #ccc;
+}
+.icons i:hover {
+    color: #ffcc00;
+}
+.input-container {
+    margin-bottom: 20px;
+}
+.input-container input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.input-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ccff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+.input-container button:hover {
+    background-color: #0099cc;
+}
+.footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+.footer a {
+    color: #00ccff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.mainTitle {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+    font-family: Roboto;
+}
+.flag {
+    height: auto; /* Set a fixed height for the flag */
+    width: 100px; /* Maintain aspect ratio */
+}
