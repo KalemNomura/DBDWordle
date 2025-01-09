@@ -21,3 +21,6 @@ function initializeRulesModal() {
         }
     });
 }
+
+// Initialize the modal functionality when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initializeRulesModal);
