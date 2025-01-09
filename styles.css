@@ -1,3 +1,6 @@
+
+/* Hola Alberto te he dejado en comentario de donde a donde abarca el css de cada parte para que no te pete la cabeza */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -13,6 +16,9 @@ body, html {
     justify-content: center;
     align-items: flex-start; /* Adjust as needed */
 }
+
+/* Start of index.html */
+
 .container {
     width: 500px;
     text-align: center;
@@ -128,3 +134,4 @@ body, html {
     background-color: #d11a1a;
 }
 
+/* End of index.html */
