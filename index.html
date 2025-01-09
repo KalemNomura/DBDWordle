@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>DbDle</title>
+    <script src="https://kit.fontawesome.com/2aa25eb160.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
@@ -14,12 +15,12 @@
             <p class="mainTitle">DbDle</p>
         </div>
         <div class="icons">
-            <i class="fas fa-question-circle"></i>
+            <i id="rulesButton" class="fas fa-question-circle"></i>
             <i class="fas fa-users"></i>
             <i class="fas fa-fire"></i>
             <i class="fas fa-chart-bar"></i>
             <i class="fas fa-tint"></i>
-            <i class="fas fa-question"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
         <div class="input-container">
             <p>Guess the Dead by Daylight Killer</p>
@@ -29,5 +30,18 @@
             <!-- You can add footer content here if needed -->
         </div>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play DbDle</h2>
+            <p>Guess the Dead by Daylight Killer in six tries.</p>
+            <p>Each guess must be a valid Killer's name. Hit the enter button to submit.</p>
+            <p>After each guess, you will receive feedback on your guess.</p>
+            <button class="close-btn" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="instructions.js"></script>
 </body>
 </html>
