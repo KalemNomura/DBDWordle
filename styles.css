@@ -1,5 +1,4 @@
 
-/* Hola Alberto te he dejado en comentario de donde a donde abarca el css de cada parte para que no te pete la cabeza */
 
 body, html {
     margin: 0;
@@ -17,7 +16,6 @@ body, html {
     align-items: flex-start; /* Adjust as needed */
 }
 
-/* Start of index.html */
 
 .container {
     width: 500px;
@@ -134,4 +132,3 @@ body, html {
     background-color: #d11a1a;
 }
 
-/* End of index.html */

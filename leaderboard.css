@@ -13,3 +13,27 @@ body, html {
     justify-content: center;
     align-items: flex-start; /* Adjust as needed */
 }
+
+.container {
+    width: 1000px;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.title {
+    color: lightgray;
+    font-size: 2em; /* Double the usual font size */
+    width: 90%; /* Almost as wide as the container */
+    margin: 0 auto; /* Center horizontally */
+    padding: 10px;
+    border-radius: 10px; /* Rounded borders */
+    background: rgba(255, 255, 255, 0.1); /* Optional: light background for contrast */
+    text-align: center;
+}
