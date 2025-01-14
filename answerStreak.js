@@ -11,7 +11,7 @@ function updateCurrentStreak(streak) {
 function toggleCurrentStreak() {
     var currentStreakElement = document.getElementById('currentStreak');
     if (currentStreakElement.style.display === 'none' || currentStreakElement.style.display === '') {
-        updateCurrentStreak(5); // Example streak value
+        updateCurrentStreak(5); // Example streak value change into function once done
         currentStreakElement.style.display = 'block';
     } else {
         currentStreakElement.style.display = 'none';
