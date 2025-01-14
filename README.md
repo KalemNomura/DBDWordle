@@ -27,11 +27,6 @@ This is because the game detects the protocol and requires a secure (HTTPS) or l
 
 ---
 
-## Features
-- Classic Wordle gameplay.
-- Fully responsive and intuitive design.
-- Tracks your progress and lets you guess words with ease.
-
 ## Contributing
 Feel free to fork this repository and submit pull requests with improvements or bug fixes!
 
