@@ -1,5 +1,6 @@
-// Load the killers.json file
+let killerInfo;
 
+// Load the killers.json file
 async function loadKillers() {
     try {
         const response = await fetch('./killers.json');
@@ -12,7 +13,7 @@ async function loadKillers() {
         const selectedKiller = data.find(killer => killer.number === randomNumber);
 
         // Save the selected entity's information in a variable
-        const killerInfo = selectedKiller;
+        killerInfo = selectedKiller;
 
         // Log the selected killer's information
         console.log('Selected Killer Information:');
@@ -27,5 +28,20 @@ async function loadKillers() {
     }
 }
 
-// Call the function to load and log the killer information ERROR
+// Function to handle key press event
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        checkAnswer();
+    }
+}
+
+// Function to check the input value against the selected killer's name
+function checkAnswer() {
+    const answerInput = document.getElementById('answer').value;
+    if (killerInfo && answerInput.toLowerCase() === killerInfo.name.toLowerCase()) {
+        alert('You Win');
+    }
+}
+
+// Call the function to load and log the killer information
 loadKillers();
