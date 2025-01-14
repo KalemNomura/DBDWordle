@@ -30,6 +30,7 @@
         </div>
         <div class="input-container">
             <p id="currentPlayers"></p>
+            <p id="currentStreak"></p>
             <p>Guess the Dead by Daylight Killer</p>
             <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)"/> 
         </div>
@@ -50,9 +51,8 @@
     </div>
 
     <script src="instructions.js"></script>
-    <script src="correctKiller.js" defer></script>
+    <script type="module" src="correctKiller.js" defer></script>
     <script src="randomPlayerCount.js"></script>
-
 </body>
 </html>
 
