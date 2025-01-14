@@ -31,7 +31,7 @@ This is because the game detects the protocol and requires a secure (HTTPS) or l
 Feel free to fork this repository and submit pull requests with improvements or bug fixes!
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under a custom lisence. See the `LICENSE` file for more details.
 
 ---
 
