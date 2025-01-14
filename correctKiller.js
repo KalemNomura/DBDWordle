@@ -39,7 +39,7 @@ function handleKeyPress(event) {
 function checkAnswer() {
     const answerInput = document.getElementById('answer').value;
     if (killerInfo && answerInput.toLowerCase() === killerInfo.name.toLowerCase()) {
-        alert('You Win');
+        window.location.href = 'youWin.html';
     }
 }
 
