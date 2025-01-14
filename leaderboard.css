@@ -85,3 +85,24 @@ body, html {
 .rank {
     text-align: center;
 }
+
+.go-back-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.go-back-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #00ccff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #0099cc;
+}

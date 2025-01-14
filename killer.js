@@ -17,8 +17,11 @@ async function loadKillers() {
         // Log the selected killer's information
         console.log('Selected Killer Information:');
         console.log('Name:', killerInfo.name);
-        console.log('Number:', killerInfo.number);
-        console.log('Description:', killerInfo.description);
+        console.log('Gender:', killerInfo.gender);
+        console.log('Nationality:', killerInfo.nationality);
+        console.log('Expansion:', killerInfo.dlc);
+        console.log('Dificulty:', killerInfo.difficulty);
+        console.log('Portrait:', killerInfo.portrait);
     } catch (error) {
         console.error('Error loading killers.json:', error);
     }

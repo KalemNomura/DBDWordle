@@ -12,8 +12,9 @@ body, html {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Adjust as needed */
+    flex-direction: column; /* Ensure elements stack vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center elements horizontally */
 }
 
 
@@ -23,8 +24,9 @@ body, html {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin: 40px 0 0 0; /* Adjust margin-top to move closer to the top */
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -94,6 +96,16 @@ body, html {
     width: 100px; /* Maintain aspect ratio */
 }
 
+.main {
+    width: 1500px; /* Match the width of the container */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px 0; /* Add vertical spacing */
+    padding: 20px; /* Add padding for content */
+    height: 500px; /* Set a fixed height for the main div */
+
+}
 
 /* Modal Styles */
 .modal {
