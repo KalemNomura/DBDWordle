@@ -1,6 +1,4 @@
-import fetch from 'node-fetch';
-import path from 'path';
-import { promises as fs } from 'fs';
+
 
 async function fetchKillersData() {
     try {
@@ -9,8 +7,16 @@ async function fetchKillersData() {
             throw new Error('Network response was not ok');
         }
         const killers = await response.json();
-        console.log(killers);
-        return killers;
+        const killerDetails = killers.map(killer => ({
+            name: killer.name,
+            gender: killer.gender,
+            nationality: killer.nationality,
+            dlc: killer.dlc,
+            difficulty: killer.difficulty,
+            portrait: killer.portrait
+        }));
+        console.log(killerDetails);
+        return killerDetails;
     } catch (error) {
         console.error('Error fetching killers data:', error);
     }
