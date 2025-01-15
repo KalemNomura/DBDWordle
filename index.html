@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>DbDle</title>
-        <!-- Favicon implementation -->
-        <link rel="icon" href="imgs/Dead-by-Daylight-Logo-2016-2021.webp" type="image/x-icon"/>
-        <script src="https://kit.fontawesome.com/2aa25eb160.js" crossorigin="anonymous"></script>
-        <!-- CSS for fontawesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
-    </head>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>DbDle</title>
+    <!-- Favicon implementation -->
+    <link rel="icon" href="imgs/Dead-by-Daylight-Logo-2016-2021.webp" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/2aa25eb160.js" crossorigin="anonymous"></script>
+    <!-- CSS for fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
 <body>
 
     <!-- Start with Live Server -->
@@ -32,7 +32,8 @@
             <p id="currentPlayers"></p>
             <p id="currentStreak"></p>
             <p>Guess the Dead by Daylight Killer</p>
-            <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)"/> 
+            <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
+            <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
        
     </div>
@@ -55,6 +56,6 @@
     <script src="randomPlayerCount.js"></script>
     <script src="answerStreak.js"></script>
     <script src="killerFetch.js" type="module"></script>
+    <script src="searchList.js" type="module"></script> <!-- Add this line -->
 </body>
 </html>
-

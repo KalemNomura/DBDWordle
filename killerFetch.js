@@ -1,6 +1,4 @@
-
-
-async function fetchKillersData() {
+export async function fetchKillersData() {
     try {
         const response = await fetch('./killers.json');
         if (!response.ok) {
@@ -21,5 +19,3 @@ async function fetchKillersData() {
         console.error('Error fetching killers data:', error);
     }
 }
-
-fetchKillersData();

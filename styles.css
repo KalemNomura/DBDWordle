@@ -53,6 +53,7 @@ body, html {
     color: #ffcc00;
 }
 .input-container {
+    position: relative; /* Add this line */
     margin-bottom: 20px;
 }
 .input-container input {
@@ -60,7 +61,7 @@ body, html {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .input-container button {
     padding: 10px 20px;
@@ -149,4 +150,55 @@ body, html {
     font-size: 1.2em;
     color: #ffcc00;
     margin-top: 20px;
+}
+
+.search-result {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Add this line */
+    color: black;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.search-result:last-child {
+    border-bottom: none; /* Add this line */
+}
+
+.search-result p {
+    margin: 5px 0;
+}
+
+.search-result .portrait {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#suggestions {
+    position: absolute; /* Add this line */
+    top: 100%; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translateX(-50%); /* Adjust position to center */
+    width: 85%; /* Add this line */
+    background: white; /* Change background to white */
+    color: black; /* Change text color to black */
+    z-index: 10; /* Add this line */
+    border-radius: 5px; /* Add this line */
+    max-height: 200px; /* Add this line */
+    overflow-y: auto; /* Add this line */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#suggestions::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+#suggestions {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.search-result:hover {
+    background-color: rgba(6, 6, 6, 0.40); /* Change background on hover */
+    color: black; /* Keep text color black */
 }
