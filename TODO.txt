@@ -1,0 +1,11 @@
+Sistema de Pistas
+Arrows to go up and down on the sugestion list
+Stopwatch
+Shop
+
+    Random Hint
+    Specific Hint
+    Background change
+    Custom font
+    Leaderboard Tittles for leaderboard
+
