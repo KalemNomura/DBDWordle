@@ -39,6 +39,7 @@ function handleKeyDown(event) {
         const input = document.getElementById('answer');
         input.value = filteredKillers[currentIndex].name;
         suggestions.innerHTML = ''; // Hide suggestions after selection
+        input.focus(); // Keep focus on the input
     }
 }
 
@@ -68,6 +69,7 @@ document.getElementById('suggestions').addEventListener('click', function(event)
         const input = document.getElementById('answer');
         input.value = filteredKillers[index].name;
         suggestions.innerHTML = ''; // Hide suggestions after selection
+        input.focus(); // Keep focus on the input
     }
 });
 
