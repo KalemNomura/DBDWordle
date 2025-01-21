@@ -1,10 +1,12 @@
 let killerInfo;
+let allKillers = [];
 
 // Load the killers.json file
 async function loadKillers() {
     try {
         const response = await fetch('./killers.json');
         const data = await response.json();
+        allKillers = data;
 
         // Generate a random number between 1 and 27
         const randomNumber = Math.floor(Math.random() * 27) + 1;
@@ -37,11 +39,17 @@ function handleKeyPress(event) {
 
 // Function to check the input value against the selected killer's name
 async function checkAnswer() {
-    const answerInput = document.getElementById('answer').value;
-    if (killerInfo && answerInput.toLowerCase() === killerInfo.name.toLowerCase()) {
-        window.location.href = 'youWin.html';
+    const answerInput = document.getElementById('answer').value.toLowerCase();
+    const validNames = allKillers.map(killer => killer.name.toLowerCase());
+
+    if (validNames.includes(answerInput)) {
+        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
+            window.location.href = 'youWin.html';
+        } else {
+            console.log('incorrect');
+        }
     } else {
-        console.log('incorrect');
+        console.log('Invalid value');
     }
 }
 
