@@ -1,3 +1,5 @@
+//Maybe need to change
+
 // Function to update the current streak
 function updateCurrentStreak(streak) {
     // Get the element by its ID

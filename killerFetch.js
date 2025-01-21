@@ -11,7 +11,7 @@ export async function fetchKillersData() {
             nationality: killer.nationality,
             dlc: killer.dlc,
             difficulty: killer.difficulty,
-            portrait: killer.portrait
+            portrait: killerInfo.imgs.portrait
         }));
         console.log(killerDetails);
         return killerDetails;
