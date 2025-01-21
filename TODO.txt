@@ -1,4 +1,5 @@
 Arrows to go up and down on the sugestion list
+Fix Current answerStreak so that it works
 Shop
 
     Random Hint
