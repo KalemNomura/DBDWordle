@@ -17,7 +17,7 @@
         <button id="startStopBtn">Start</button>
         <button id="resetBtn">Reset</button>
     </div>
-    
+
     <div class="container">
         <div class="logo">
             <img alt="DbDle Logo" src="imgs/image.webp"/> 
@@ -29,8 +29,8 @@
             <i class="fas fa-fire"></i>
             <i class="fas fa-chart-bar" onclick="window.location.href='leaderboard.html'"></i>
             <i class="fa-solid fa-stopwatch" onclick="toggleStopwatch()"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
+            <i class="fa-solid fa-cart-shopping" onclick="toggleShop()"></i>
+    </div>
         <div class="input-container">
             <p id="currentPlayers"></p>
             <p id="currentStreak"></p>
@@ -38,6 +38,12 @@
             <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
             <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
+    </div>
+
+    <div class="shop">
+
+        <h2 class="shopTitle">Shop</h2>
+
     </div>
 
     <div class="main">
@@ -82,6 +88,8 @@
     <script src="killerFetch.js" type="module"></script>
     <script src="searchList.js" type="module"></script> <!-- Add this line -->
     <script src="stopwatch.js"></script>
+    <script src="shop.js"></script>
+
 </body>
 </html>
 </html>

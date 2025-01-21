@@ -1,5 +1,4 @@
 Arrows to go up and down on the sugestion list
-Stopwatch
 Shop
 
     Random Hint
