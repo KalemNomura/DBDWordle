@@ -36,10 +36,12 @@ function handleKeyPress(event) {
 }
 
 // Function to check the input value against the selected killer's name
-function checkAnswer() {
+async function checkAnswer() {
     const answerInput = document.getElementById('answer').value;
     if (killerInfo && answerInput.toLowerCase() === killerInfo.name.toLowerCase()) {
         window.location.href = 'youWin.html';
+    } else {
+        console.log('incorrect');
     }
 }
 
