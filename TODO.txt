@@ -1,7 +1,7 @@
 Arrows to go up and down on the sugestion list
 Fix Current answerStreak so that it works
 Edit how to play
-Show newest killer at the top
+Show newest killer at the top or go to the bottom of the list
 Shop
 
     Random Hint
