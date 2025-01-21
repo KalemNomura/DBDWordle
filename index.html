@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>DbDle</title>
@@ -35,7 +32,6 @@
             <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
             <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
-       
     </div>
 
     <div class="main">
@@ -68,6 +64,8 @@
             <p>Each guess must be a valid Killer's name. Hit the enter button to submit.</p>
             <p>After each guess, you will receive feedback on your guess.</p>
             <button class="close-btn" id="closeModal">Close</button>
+        <div class="footer">
+            <!-- You can add footer content here if needed -->
         </div>
     </div>
 
@@ -78,4 +76,5 @@
     <script src="killerFetch.js" type="module"></script>
     <script src="searchList.js" type="module"></script> <!-- Add this line -->
 </body>
+</html>
 </html>
