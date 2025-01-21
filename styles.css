@@ -230,4 +230,6 @@ td{
     width: 100px;
     padding: 0; /* Elimina el espacio interno en las celdas */
     vertical-align: middle; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el contenido horizontalmente */
+
 }
