@@ -233,3 +233,28 @@ td{
     text-align: center; /* Centra el contenido horizontalmente */
 
 }
+
+/* Make tbody scrollable */
+tbody {
+    display: block;
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
+
+/* Hide scrollbar for WebKit browsers */
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+tbody {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Ensure table headers and cells align correctly */
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
