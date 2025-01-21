@@ -320,3 +320,15 @@ button:hover {
     font-size: 1.5em;
   
 }
+
+.shop-icon {
+    font-size: 1em; /* Make the icons smaller */
+    margin-right: 10px; /* Add some space between the icon and the text */
+    vertical-align: middle; /* Align icons with the text */
+}
+
+.shop-text {
+    display: inline; /* Display text inline with the icons */
+    margin: 0; /* Remove default margin */
+    vertical-align: middle; /* Align text with the icons */
+}
