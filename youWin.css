@@ -29,3 +29,12 @@ button {
 button:hover {
     background-color: #666; /* Change background color on hover */
 }
+
+.container {
+    width: 500px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px 0 0 0; /* Adjust margin-top to move closer to the top */
+}

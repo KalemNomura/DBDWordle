@@ -132,17 +132,12 @@ body, html {
 }
 
 .close-btn {
-    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
     cursor: pointer;
     margin-top: 10px;
-}
-
-.close-btn:hover {
-    background-color: #d11a1a;
 }
 
 #currentStreak {
@@ -257,4 +252,45 @@ thead, tbody tr {
     display: table;
     width: 100%;
     table-layout: fixed;
+}
+
+.stopwatch {
+    position: absolute;
+    top: 70px;
+    left: 20%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 500px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.7em;
+    z-index: 5;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    display: none; /* Initially hidden */
+}
+
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #d11a1a;
 }

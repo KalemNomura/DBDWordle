@@ -12,6 +12,12 @@
 
     <!-- Start with Live Server -->
 
+    <div class="stopwatch">
+        <div id="display">00:00:00</div>
+        <button id="startStopBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    
     <div class="container">
         <div class="logo">
             <img alt="DbDle Logo" src="imgs/image.webp"/> 
@@ -22,7 +28,7 @@
             <i class="fas fa-users" id="playerCount"></i>
             <i class="fas fa-fire"></i>
             <i class="fas fa-chart-bar" onclick="window.location.href='leaderboard.html'"></i>
-            <i class="fa-solid fa-stopwatch"></i>
+            <i class="fa-solid fa-stopwatch" onclick="toggleStopwatch()"></i>
             <i class="fa-solid fa-cart-shopping"></i>
         </div>
         <div class="input-container">
@@ -75,6 +81,7 @@
     <script src="answerStreak.js"></script>
     <script src="killerFetch.js" type="module"></script>
     <script src="searchList.js" type="module"></script> <!-- Add this line -->
+    <script src="stopwatch.js"></script>
 </body>
 </html>
 </html>
