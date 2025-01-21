@@ -22,7 +22,7 @@ async function loadKillers() {
         console.log('Nationality:', killerInfo.nationality);
         console.log('Expansion:', killerInfo.dlc);
         console.log('Dificulty:', killerInfo.difficulty);
-        console.log('Portrait:', killerInfo.portrait);
+        console.log('Portrait:', killerInfo.imgs.portrait);
     } catch (error) {
         console.error('Error loading killers.json:', error);
     }
