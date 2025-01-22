@@ -166,5 +166,31 @@ async function checkAnswer() {
     }
 }
 
+function scrollToBottom() {
+    const tbody = document.querySelector('tbody');
+    setTimeout(() => {
+        tbody.scrollTop = tbody.scrollHeight;
+    }, 0);
+}
+
+// Function to check the input value against the selected killer's name
+async function checkAnswer() {
+    const answerInput = document.getElementById('answer').value.toLowerCase();
+    const validNames = allKillers.map(killer => killer.name.toLowerCase());
+
+    if (validNames.includes(answerInput)) {
+        const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
+        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
+            window.location.href = 'youWin.html';
+        } else {
+            console.log('incorrect');
+            addKillerToTable(enteredKiller);
+            scrollToBottom(); // Scroll to the bottom after adding a new 'td'
+        }
+    } else {
+        console.log('Invalid value');
+    }
+}
+
 // Call the function to load and log the killer information
 loadKillers();
