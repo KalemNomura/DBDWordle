@@ -1,15 +1,13 @@
-Arrows to go up and down on the sugestion list
+Arrows to go up and down on the sugestion list (works but cannot see the selected option)
 
 Fix Current answerStreak so that it works
+
+make a streak of answers
 
 Edit how to play
 
 Show newest killer at the top or go to the bottom of the list
 Shop
 
-    Random Hint
-    Specific Hint
-    Background change
-    Custom font
-    Leaderboard Tittles for leaderboard
+background changes
 
