@@ -327,7 +327,7 @@ button:hover {
     vertical-align: middle; /* Align icons with the text */
 }
 
-.shop-text {
+#shop-text {
     display: inline; /* Display text inline with the icons */
     margin: 0; /* Remove default margin */
     vertical-align: middle; /* Align text with the icons */
