@@ -16,15 +16,6 @@ async function loadKillers() {
 
         // Save the selected entity's information in a variable
         killerInfo = selectedKiller;
-
-        // Log the selected killer's information
-        console.log('Selected Killer Information:');
-        console.log('Name:', killerInfo.name);
-        console.log('Gender:', killerInfo.gender);
-        console.log('Nationality:', killerInfo.nationality);
-        console.log('Expansion:', killerInfo.dlc);
-        console.log('Dificulty:', killerInfo.difficulty);
-        console.log('Portrait:', killerInfo.imgs.portrait);
     } catch (error) {
         console.error('Error loading killers.json:', error);
     }
@@ -38,74 +29,7 @@ function handleKeyPress(event) {
 }
 
 // Function to check the input value against the selected killer's name
-async function checkAnswer() {
-    const answerInput = document.getElementById('answer').value.toLowerCase();
-    const validNames = allKillers.map(killer => killer.name.toLowerCase());
 
-    if (validNames.includes(answerInput)) {
-        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
-            window.location.href = 'youWin.html';
-        } else {
-            console.log('incorrect');
-        }
-    } else {
-        console.log('Invalid value');
-    }
-}
-
-// Function to create a new table row with the killer's information
-function addKillerToTable(killer) {
-    const tbody = document.querySelector('.tabla tbody');
-    const row = document.createElement('tr');
-
-    const imgCell = document.createElement('td');
-    const img = document.createElement('img');
-    img.src = killer.imgs.portrait;
-    img.alt = killer.name;
-    img.style.width = '100px'; // Adjust the size as needed
-    imgCell.appendChild(img);
-    row.appendChild(imgCell);
-
-    const nameCell = document.createElement('td');
-    nameCell.textContent = killer.name;
-    row.appendChild(nameCell);
-
-    const genderCell = document.createElement('td');
-    genderCell.textContent = killer.gender;
-    row.appendChild(genderCell);
-
-    const nationalityCell = document.createElement('td');
-    nationalityCell.textContent = killer.nationality;
-    row.appendChild(nationalityCell);
-
-    const expansionCell = document.createElement('td');
-    expansionCell.textContent = killer.dlc;
-    row.appendChild(expansionCell);
-
-    const difficultyCell = document.createElement('td');
-    difficultyCell.textContent = killer.difficulty;
-    row.appendChild(difficultyCell);
-
-    tbody.appendChild(row);
-}
-
-// Function to check the input value against the selected killer's name
-async function checkAnswer() {
-    const answerInput = document.getElementById('answer').value.toLowerCase();
-    const validNames = allKillers.map(killer => killer.name.toLowerCase());
-
-    if (validNames.includes(answerInput)) {
-        const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
-        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
-            window.location.href = 'youWin.html';
-        } else {
-            console.log('incorrect');
-            addKillerToTable(enteredKiller);
-        }
-    } else {
-        console.log('Invalid value');
-    }
-}
 
 // Function to create a new table row with the killer's information
 function addKillerToTable(killer) {
@@ -148,23 +72,7 @@ function addKillerToTable(killer) {
     tbody.appendChild(row);
 }
 
-// Function to check the input value against the selected killer's name
-async function checkAnswer() {
-    const answerInput = document.getElementById('answer').value.toLowerCase();
-    const validNames = allKillers.map(killer => killer.name.toLowerCase());
 
-    if (validNames.includes(answerInput)) {
-        const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
-        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
-            window.location.href = 'youWin.html';
-        } else {
-            console.log('incorrect');
-            addKillerToTable(enteredKiller);
-        }
-    } else {
-        console.log('Invalid value');
-    }
-}
 
 function scrollToBottom() {
     const tbody = document.querySelector('tbody');
@@ -183,12 +91,12 @@ async function checkAnswer() {
         if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
             window.location.href = 'youWin.html';
         } else {
-            console.log('incorrect');
+        //    console.log('incorrect');
             addKillerToTable(enteredKiller);
             scrollToBottom(); // Scroll to the bottom after adding a new 'td'
         }
     } else {
-        console.log('Invalid value');
+       // console.log('Invalid value');
     }
 }
 

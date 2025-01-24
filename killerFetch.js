@@ -13,7 +13,6 @@ export async function fetchKillersData() {
             difficulty: killer.difficulty,
             portrait: killerInfo.imgs.portrait
         }));
-        console.log(killerDetails);
         return killerDetails;
     } catch (error) {
         console.error('Error fetching killers data:', error);
