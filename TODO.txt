@@ -1,11 +1,7 @@
 IGNORAR PORFA
 
-Arrows to go up and down on the sugestion list (kindda work but conflict with colors)
-
-Fix Current answerStreak so that it works
+Arrows to go up and down on the sugestion list (works but conflict with colors)
 
 make a Number of Tries
 
 add sounds? Maybe gen error sound when you fail?
-
-change how the alert for not enough points work

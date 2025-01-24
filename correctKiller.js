@@ -1,6 +1,7 @@
 let killerInfo;
 let allKillers = [];
 let points = 0;
+let streak = 0; // Initialize streak
 
 // Load the killers.json file
 async function loadKillers() {
@@ -39,12 +40,15 @@ async function checkAnswer() {
         if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
             window.location.href = 'youWin.html';
             updatePoints(50); // Add 50 points for a correct answer
+            updateStreak(true); // Update streak for correct answer
         } else {
             addKillerToTable(enteredKiller);
             scrollToBottom(); // Scroll to the bottom after adding a new 'td'
+            updateStreak(false); // Do not reset streak for incorrect answer
         }
     } else {
         console.log('Invalid value');
+        updateStreak(false); // Do not reset streak for invalid answer
     }
 }
 
@@ -103,10 +107,24 @@ function updatePoints(value) {
     document.getElementById('points').textContent = `Points: ${points}`;
 }
 
-// Initialize points from localStorage
+// Function to update streak
+function updateStreak(isCorrect) {
+    if (isCorrect) {
+        streak += 1;
+        console.log('Correct answer. Streak incremented:', streak);
+    } else {
+        console.log('Incorrect answer. Streak unchanged:', streak);
+    }
+    localStorage.setItem('streak', streak);
+    updateCurrentStreak(streak);
+}
+
+// Initialize points and streak from localStorage
 document.addEventListener('DOMContentLoaded', () => {
     points = parseInt(localStorage.getItem('points')) || 0;
     document.getElementById('points').textContent = `Points: ${points}`;
+    streak = parseInt(localStorage.getItem('streak')) || 0;
+    updateCurrentStreak(streak);
 });
 
 // Call the function to load and log the killer information
