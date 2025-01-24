@@ -35,7 +35,7 @@
             <p id="currentPlayers"></p>
             <p id="currentStreak"></p>
             <p>Guess the Dead by Daylight Killer</p>
-            <p class="points"></p>
+            <p id="points">Points: 0</p>            <p class="points"></p>
             <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
             <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
@@ -78,9 +78,9 @@
     <div id="rulesModal" class="modal">
         <div class="modal-content">
             <h2>How to Play DbDle</h2>
-            <p>Guess the Dead by Daylight Killer in six tries.</p>
+            <p>Guess the Dead by Daylight Killer using the clues given to you.</p>
             <p>Each guess must be a valid Killer's name. Hit the enter button to submit.</p>
-            <p>After each guess, you will receive feedback on your guess.</p>
+            <p>You have a cosmetic shop and a stopwatch if you are competitive</p>
             <button class="close-btn" id="closeModal">Close</button>
     </div>
 

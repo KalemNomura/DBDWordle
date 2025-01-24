@@ -81,7 +81,6 @@ function scrollToBottom() {
     }, 0);
 }
 
-// Function to check the input value against the selected killer's name
 async function checkAnswer() {
     const answerInput = document.getElementById('answer').value.toLowerCase();
     const validNames = allKillers.map(killer => killer.name.toLowerCase());
@@ -90,15 +89,28 @@ async function checkAnswer() {
         const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
         if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
             window.location.href = 'youWin.html';
+            updatePoints(50); // Add 50 points for a correct answer
         } else {
-        //    console.log('incorrect');
             addKillerToTable(enteredKiller);
             scrollToBottom(); // Scroll to the bottom after adding a new 'td'
         }
     } else {
-       // console.log('Invalid value');
+        console.log('Invalid value');
     }
 }
+
+// Function to update points
+function updatePoints(value) {
+    points += value;
+    localStorage.setItem('points', points);
+    document.getElementById('points').textContent = `Points: ${points}`;
+}
+
+// Initialize points from localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    points = parseInt(localStorage.getItem('points')) || 0;
+    document.getElementById('points').textContent = `Points: ${points}`;
+});
 
 // Call the function to load and log the killer information
 loadKillers();

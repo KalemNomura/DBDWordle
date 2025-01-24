@@ -6,8 +6,6 @@ Fix Current answerStreak so that it works
 
 make a Number of Tries
 
-Edit how to play
-
 Show newest killer at the top or go to the bottom of the list
 
 
