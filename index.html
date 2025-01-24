@@ -35,6 +35,7 @@
             <p id="currentPlayers"></p>
             <p id="currentStreak"></p>
             <p>Guess the Dead by Daylight Killer</p>
+            <p class="points"></p>
             <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
             <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
@@ -42,14 +43,14 @@
 
     <div class="shop">
         <h2 class="shopTitle">Background Shop</h2>
-        <div>
-            <i class="fa-solid fa-pen shop-icon" onclick="updateBackground('imgs/Legionbg.webp')"></i><p class="shop-text" id="legion">The Legion</p><br>
-            <i class="fa-solid fa-pen-fancy shop-icon" onclick="updateBackground('imgs/Onibg.webp')"></i><p class="shop-text" id="oni">The Oni</p><br>
-            <i class="fa-solid fa-pencil shop-icon" onclick="updateBackground('imgs/Spiritbg.webp')"></i><p class="shop-text" id="spirit">The Spirit</p><br>
-            <i class="fa-solid fa-marker shop-icon" onclick="updateBackground('imgs/Trapperbg.webp')"></i><p class="shop-text" id="trapper">The Trapper</p><br>
+        <div> 
+            <p onclick="updateBackground('imgs/background.webp')" class="shop-text" id="legion">✧ Default ✧</p><br>
+            <p onclick="updateBackground('imgs/Legionbg.webp')" class="shop-text" id="legion">✧ The Legion ✧</p><br>
+            <p onclick="updateBackground('imgs/Onibg.webp')" class="shop-text" id="oni">✧ The Oni ✧</p><br>
+            <p onclick="updateBackground('imgs/Spiritbg.webp')" class="shop-text" id="spirit">✧ The Spirit ✧</p><br>
+            <p onclick="updateBackground('imgs/Trapperbg.webp')" class="shop-text" id="trapper">✧ The Trapper ✧</p><br>
         </div>
     </div>
-<!-- ...existing code... -->
 
     <div class="main">
 

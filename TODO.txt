@@ -15,3 +15,4 @@ Shop
 
 background changes
 
+add sounds? Maybe gen error sound when you fail?
