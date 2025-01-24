@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>DbDle</title>
@@ -30,12 +33,12 @@
             <i class="fas fa-chart-bar" onclick="window.location.href='leaderboard.html'"></i>
             <i class="fa-solid fa-stopwatch" onclick="toggleStopwatch()"></i>
             <i class="fa-solid fa-cart-shopping" onclick="toggleShop()"></i>
-    </div>
+        </div>
         <div class="input-container">
             <p id="currentPlayers"></p>
             <p id="currentStreak"></p>
             <p>Guess the Dead by Daylight Killer</p>
-            <p id="points">Points: 0</p>            <p class="points"></p>
+            <p id="points">Points: 0</p>
             <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
             <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
@@ -53,7 +56,6 @@
     </div>
 
     <div class="main">
-
         <div class="tabla">
             <table>
               <thead>
@@ -65,13 +67,11 @@
                 <th>Expansion</th>
                 <th>Difficulty</th>
               </tr>
+              </thead>
               <tbody>
-  
               </tbody>
-            </thead>
             </table>
-            </div>
-
+        </div>
     </div>
 
     <!-- Modal Structure -->
@@ -82,15 +82,15 @@
             <p>Each guess must be a valid Killer's name. Hit the enter button to submit.</p>
             <p>You have a cosmetic shop and a stopwatch if you are competitive</p>
             <button class="close-btn" id="closeModal">Close</button>
+        </div>
     </div>
 
-    <div id="rulesModal" class="modal">
+    <div id="pointsModal" class="modal">
         <div class="modal-content">
-            <h2>How to Play DbDle</h2>
-            <p>Guess the Dead by Daylight Killer using the clues given to you.</p>
-            <p>Each guess must be a valid Killer's name. Hit the enter button to submit.</p>
-            <p>You have a cosmetic shop and a stopwatch if you are competitive</p>
-            <button class="close-btn" id="closeModal">Close</button>
+            <h2>Insufficient Points</h2>
+            <p>You need at least 100 points to change the background.</p>
+            <button class="close-btn" id="closePointsModal">Close</button>
+        </div>
     </div>
 
     <script src="instructions.js"></script>
@@ -103,5 +103,4 @@
     <script src="shop.js"></script>
 
 </body>
-</html>
 </html>
