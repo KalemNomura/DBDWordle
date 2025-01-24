@@ -2,6 +2,7 @@ let killerInfo;
 let allKillers = [];
 let points = 0;
 let streak = 0; // Initialize streak
+let numberOfTries = 0; // Initialize number of tries
 
 // Load the killers.json file
 async function loadKillers() {
@@ -38,9 +39,10 @@ async function checkAnswer() {
     if (validNames.includes(answerInput)) {
         const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
         if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
-            window.location.href = 'youWin.html';
             updatePoints(50); // Add 50 points for a correct answer
             updateStreak(true); // Update streak for correct answer
+            localStorage.setItem('numberOfTries', numberOfTries); // Store number of tries
+            window.location.href = 'youWin.html';
         } else {
             addKillerToTable(enteredKiller);
             scrollToBottom(); // Scroll to the bottom after adding a new 'td'
@@ -50,6 +52,7 @@ async function checkAnswer() {
         console.log('Invalid value');
         updateStreak(false); // Do not reset streak for invalid answer
     }
+    numberOfTries++; // Increment number of tries
 }
 
 // Function to create a new table row with the killer's information

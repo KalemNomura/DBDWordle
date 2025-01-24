@@ -15,13 +15,20 @@
         <h1>You Win!</h1>
         <p>Would you like to play again?</p>
         <p id="timeTaken"></p>
-        <p id="numberOfTries">You took 1 try to guess right</p> 
+        <p id="numberOfTries"></p> 
         <button onclick="window.location.href='index.html'">Yes</button>
         <button onclick="" id="No">No</button>
 
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const numberOfTries = localStorage.getItem('numberOfTries') || 0;
+            document.getElementById('numberOfTries').textContent = `Number of Tries: ${numberOfTries}`;
+        });
+    </script>
     <script src="buttonMove.js"></script>
     <script src="displayTime.js"></script> <!-- Link to the external script -->
+    <script src="correctKiller.js"></script> <!-- Link to the correctKiller.js file -->
 </body>
 </html>

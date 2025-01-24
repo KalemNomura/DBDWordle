@@ -586,7 +586,7 @@
 		"code": "theexecutioner",
 		"name": "The Executioner",
 		"fullName": "Pyramid Head",
-		"nationality": null,
+		"nationality": "Unknown",
 		"gender": "Male",
 		"licensed": true,
 		"dlc": "Chapter XVI: Silent Hill",
