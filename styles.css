@@ -321,7 +321,10 @@ button:hover {
   
 }
 
-
+/* Change background color to white when hovered and selected */
+.search-result:hover.selected {
+    background-color: white; /* Change background to white on hover */
+}
 
 .shop-text {
     display: inline; /* Display text inline with the icons */
@@ -332,4 +335,8 @@ button:hover {
 
 .shop-text:hover {
     cursor: default; /* Change cursor to text select on hover */
+}
+
+.search-result.selected {
+    background-color: #d3d3d3; /* Set background color for selected item */
 }

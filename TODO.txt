@@ -1,16 +1,11 @@
 IGNORAR PORFA
 
-Arrows to go up and down on the sugestion list (works but cannot see the selected option)
+Arrows to go up and down on the sugestion list (kindda work but conflict with colors)
 
 Fix Current answerStreak so that it works
 
 make a Number of Tries
 
-Show newest killer at the top or go to the bottom of the list
-
-
-Shop
-
-background changes
-
 add sounds? Maybe gen error sound when you fail?
+
+change how the alert for not enough points work

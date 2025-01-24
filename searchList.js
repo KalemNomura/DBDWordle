@@ -10,6 +10,8 @@ document.getElementById('answer').addEventListener('input', function(event) {
     updateSuggestions(filteredKillers);
 });
 
+document.getElementById('answer').addEventListener('keydown', handleKeyDown);
+
 function updateSuggestions(filteredKillers) {
     const suggestions = document.getElementById('suggestions');
     suggestions.innerHTML = '';
@@ -36,10 +38,8 @@ function handleKeyDown(event) {
         currentIndex = (currentIndex - 1 + suggestionItems.length) % suggestionItems.length;
         updateSelection(suggestionItems);
     } else if (event.key === 'Enter' && currentIndex >= 0) {
-        const input = document.getElementById('answer');
-        input.value = filteredKillers[currentIndex].name;
-        suggestions.innerHTML = ''; // Hide suggestions after selection
-        input.focus(); // Keep focus on the input
+        event.target.value = suggestionItems[currentIndex].textContent;
+        suggestions.innerHTML = ''; // Clear suggestions
     }
 }
 
@@ -72,8 +72,6 @@ document.getElementById('suggestions').addEventListener('click', function(event)
         input.focus(); // Keep focus on the input
     }
 });
-
-document.getElementById('answer').addEventListener('keydown', handleKeyDown);
 
 async function init() {
     killers = await fetchKillersData();
