@@ -1,5 +1,6 @@
 let killerInfo;
 let allKillers = [];
+let points = 0;
 
 // Load the killers.json file
 async function loadKillers() {
@@ -29,7 +30,23 @@ function handleKeyPress(event) {
 }
 
 // Function to check the input value against the selected killer's name
+async function checkAnswer() {
+    const answerInput = document.getElementById('answer').value.toLowerCase();
+    const validNames = allKillers.map(killer => killer.name.toLowerCase());
 
+    if (validNames.includes(answerInput)) {
+        const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
+        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
+            window.location.href = 'youWin.html';
+            updatePoints(50); // Add 50 points for a correct answer
+        } else {
+            addKillerToTable(enteredKiller);
+            scrollToBottom(); // Scroll to the bottom after adding a new 'td'
+        }
+    } else {
+        console.log('Invalid value');
+    }
+}
 
 // Function to create a new table row with the killer's information
 function addKillerToTable(killer) {
@@ -72,31 +89,11 @@ function addKillerToTable(killer) {
     tbody.appendChild(row);
 }
 
-
-
 function scrollToBottom() {
     const tbody = document.querySelector('tbody');
     setTimeout(() => {
         tbody.scrollTop = tbody.scrollHeight;
     }, 0);
-}
-
-async function checkAnswer() {
-    const answerInput = document.getElementById('answer').value.toLowerCase();
-    const validNames = allKillers.map(killer => killer.name.toLowerCase());
-
-    if (validNames.includes(answerInput)) {
-        const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
-        if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
-            window.location.href = 'youWin.html';
-            updatePoints(50); // Add 50 points for a correct answer
-        } else {
-            addKillerToTable(enteredKiller);
-            scrollToBottom(); // Scroll to the bottom after adding a new 'td'
-        }
-    } else {
-        console.log('Invalid value');
-    }
 }
 
 // Function to update points

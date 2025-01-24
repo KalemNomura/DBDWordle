@@ -8,9 +8,15 @@ function toggleShop() {
 }
 
 function updateBackground(imagePath) {
-    console.log(`Updating background to: ${imagePath}`); // Debugging line
-    document.body.style.backgroundImage = `url('${imagePath}')`;
-    localStorage.setItem('backgroundImage', imagePath); // Save the path to localStorage
+    const points = parseInt(localStorage.getItem('points')) || 0;
+    if (points >= 100) {
+        console.log(`Updating background to: ${imagePath}`); // Debugging line
+        document.body.style.backgroundImage = `url('${imagePath}')`;
+        localStorage.setItem('backgroundImage', imagePath); // Save the path to localStorage
+        updatePoints(-100); // Subtract 100 points
+    } else {
+        alert('You need at least 100 points to change the background.');
+    }
 }
 
 // Check localStorage for a saved background image on page load
