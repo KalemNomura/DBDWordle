@@ -3,3 +3,7 @@ IGNORAR PORFA
 Arrows to go up and down on the sugestion list (works but conflict with colors)
 
 add sounds? Maybe gen error sound when you fail?
+
+deleate imput after every atempt 
+
+fix timer
