@@ -1,8 +1,8 @@
 let killerInfo;
 let allKillers = [];
 let points = 0;
-let streak = 0; // Initialize streak
-let numberOfTries = 0; // Initialize number of tries
+let streak = 0; 
+let numberOfTries = 0; 
 
 // Load the killers.json file
 async function loadKillers() {
@@ -33,7 +33,8 @@ function handleKeyPress(event) {
 
 // Function to check the input value against the selected killer's name
 async function checkAnswer() {
-    const answerInput = document.getElementById('answer').value.toLowerCase();
+    const answerInputElement = document.getElementById('answer');
+    const answerInput = answerInputElement.value.toLowerCase();
     const validNames = allKillers.map(killer => killer.name.toLowerCase());
 
     if (validNames.includes(answerInput)) {
@@ -53,14 +54,26 @@ async function checkAnswer() {
         updateStreak(false); // Do not reset streak for invalid answer
     }
     numberOfTries++; // Increment number of tries
+
+    // Clear the input field after making a guess
+    answerInputElement.value = '';
 }
 
-// Function to create a new table row with the killer's information
+// Sound System
+const sound = new Audio('./audios/checkAudio.mp3');
+
 function addKillerToTable(killer) {
     const tbody = document.querySelector('.tabla tbody');
     const row = document.createElement('tr');
 
-    const imgCell = document.createElement('td');
+    function createTd() {
+        const td = document.createElement('td');
+        // Play the sound
+        sound.play();
+        return td;
+    }
+
+    const imgCell = createTd();
     const img = document.createElement('img');
     img.src = killer.imgs.portrait;
     img.alt = killer.name;
@@ -68,27 +81,27 @@ function addKillerToTable(killer) {
     imgCell.appendChild(img);
     row.appendChild(imgCell);
 
-    const nameCell = document.createElement('td');
+    const nameCell = createTd();
     nameCell.textContent = killer.name;
     nameCell.style.backgroundColor = killer.name === killerInfo.name ? 'green' : 'red';
     row.appendChild(nameCell);
 
-    const genderCell = document.createElement('td');
+    const genderCell = createTd();
     genderCell.textContent = killer.gender;
     genderCell.style.backgroundColor = killer.gender === killerInfo.gender ? 'green' : 'red';
     row.appendChild(genderCell);
 
-    const nationalityCell = document.createElement('td');
+    const nationalityCell = createTd();
     nationalityCell.textContent = killer.nationality;
     nationalityCell.style.backgroundColor = killer.nationality === killerInfo.nationality ? 'green' : 'red';
     row.appendChild(nationalityCell);
 
-    const expansionCell = document.createElement('td');
+    const expansionCell = createTd();
     expansionCell.textContent = killer.dlc;
     expansionCell.style.backgroundColor = killer.dlc === killerInfo.dlc ? 'green' : 'red';
     row.appendChild(expansionCell);
 
-    const difficultyCell = document.createElement('td');
+    const difficultyCell = createTd();
     difficultyCell.textContent = killer.difficulty;
     difficultyCell.style.backgroundColor = killer.difficulty === killerInfo.difficulty ? 'green' : 'red';
     row.appendChild(difficultyCell);

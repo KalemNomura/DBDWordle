@@ -205,7 +205,7 @@ body, html {
 }
 
 table {
-    margin: 0 auto; /* Center the table within the parent div */
+    margin: 0; /* Center the table within the parent div */
     border-collapse: separate;
     border-spacing: 15px;
     font-size: 1.2rem;
@@ -213,7 +213,8 @@ table {
 
 th {
     border-bottom: 4px solid;
-    padding: 10px;
+    padding: 0px; /* Reduce padding to move closer to the top */
+    margin-top: 0; /* Ensure no margin at the top */
     width: 200px;
     text-align: center; /* Center text within th */
 }
@@ -229,10 +230,9 @@ td{
 
 }
 
-/* Make tbody scrollable */
 tbody {
     display: block;
-    max-height: 300px; /* Adjust the height as needed */
+    max-height: 326px; /* Adjust the height as needed */
     overflow-y: auto;
 }
 
@@ -260,7 +260,7 @@ thead, tbody tr {
     left: 20%; /* Center horizontally */
     transform: translateX(-50%);
     width: 400px;
-    height: 200px;
+    height: 250px;
     background: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 10px;
