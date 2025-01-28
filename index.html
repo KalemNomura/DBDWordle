@@ -1,33 +1,108 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>DbDle</title>
+    <!-- Favicon implementation -->
+    <link rel="icon" href="imgs/Dead-by-Daylight-Logo-2016-2021.webp" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/2aa25eb160.js" crossorigin="anonymous"></script>
+    <!-- CSS for fontawesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
+
+    <!-- Start with Live Server -->
+
+    <div class="stopwatch">
+        <p>Your last time was: </p>
+        <div id="display">00:00:00</div>
+        <button id="startStopBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
     <div class="container">
         <div class="logo">
-            <img alt="DbDle Logo" src="imgs/image.webp"/> <!-- Updated path -->
+            <img alt="DbDle Logo" src="imgs/image.webp"/> 
             <p class="mainTitle">DbDle</p>
         </div>
         <div class="icons">
-            <i class="fas fa-question-circle"></i>
-            <i class="fas fa-users"></i>
+            <i id="rulesButton" class="fas fa-question-circle"></i>
+            <i class="fas fa-users" id="playerCount"></i>
             <i class="fas fa-fire"></i>
-            <i class="fas fa-chart-bar"></i>
-            <i class="fas fa-tint"></i>
-            <i class="fas fa-question"></i>
+            <i class="fas fa-chart-bar" onclick="window.location.href='leaderboard.html'"></i>
+            <i class="fa-solid fa-stopwatch" onclick="toggleStopwatch()"></i>
+            <i class="fa-solid fa-cart-shopping" onclick="toggleShop()"></i>
         </div>
         <div class="input-container">
+            <p id="currentPlayers"></p>
+            <!-- Alberto ha dicho que se puede dejar asi -->
+            <p id="currentStreak"></p>
             <p>Guess the Dead by Daylight Killer</p>
-            <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text"/> 
-        </div>
-        <div class="footer">
-            <!-- You can add footer content here if needed -->
+            <p id="points">Points: 0</p>
+            <input placeholder="Write a Dead By Daylight Killer's Name to Begin" type="text" id="answer" onkeypress="handleKeyPress(event)" autocomplete="off"/> 
+            <div id="suggestions"></div> <!-- Change this line to a div for custom search results -->
         </div>
     </div>
+
+    <div class="shop">
+        <h2 class="shopTitle">Background Shop</h2>
+        <div> 
+            <p onclick="updateBackground('imgs/background.webp')" class="shop-text" id="legion">✧ Default ✧</p><br>
+            <p onclick="updateBackground('imgs/Legionbg.webp')" class="shop-text" id="legion">✧ The Legion (100 points) ✧</p><br>
+            <p onclick="updateBackground('imgs/Onibg.webp')" class="shop-text" id="oni">✧ The Oni (100 points) ✧</p><br>
+            <p onclick="updateBackground('imgs/Spiritbg.webp')" class="shop-text" id="spirit">✧ The Spirit (100 points) ✧</p><br>
+            <p onclick="updateBackground('imgs/Trapperbg.webp')" class="shop-text" id="trapper">✧ The Trapper (100 points) ✧</p><br>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="tabla">
+            <table>
+              <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Nationality</th>
+                <th>Expansion</th>
+                <th>Difficulty</th>
+              </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play DbDle</h2>
+            <p>Guess the Dead by Daylight Killer using the clues given to you.</p>
+            <p>Each guess must be a valid Killer's name. Hit the enter button to submit.</p>
+            <p>You have a cosmetic shop and a stopwatch if you are competitive</p>
+            <button class="close-btn" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <div id="pointsModal" class="modal">
+        <div class="modal-content">
+            <h2>Insufficient Points</h2>
+            <p>You need at least 100 points to change the background.</p>
+            <button class="close-btn" id="closePointsModal">Close</button>
+        </div>
+    </div>
+
+    <script src="instructions.js"></script>
+    <script src="correctKiller.js" defer></script>
+    <script src="randomPlayerCount.js"></script>
+    <script src="answerStreak.js"></script>
+    <script src="killerFetch.js" type="module"></script>
+    <script src="searchList.js" type="module"></script> 
+    <script src="stopwatch.js"></script>
+    <script src="shop.js"></script>
+
 </body>
 </html>

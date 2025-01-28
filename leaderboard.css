@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000;
+    background-image: url('imgs/background.webp'); /* Updated path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjust as needed */
+    overflow: hidden; /* Disable scrolling */
+
+}
+
+.container {
+    width: 1000px;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.title {
+    color: lightgray;
+    font-size: 2em; /* Double the usual font size */
+    width: 90%; /* Almost as wide as the container */
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 10px;
+    border-radius: 10px; /* Rounded borders */
+    background: rgba(255, 255, 255, 0.1); /* Optional: light background for contrast */
+    text-align: center;
+    height: 50px; /* Adjust the height as needed */
+}
+
+.ranking {
+    color: lightgray;
+    font-size: 1.5em; /* Slightly smaller font size */
+    width: 90%; /* Almost as wide as the container */
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 10px;
+    border-radius: 10px; /* Rounded borders */
+    background: rgba(255, 255, 255, 0.1); /* Optional: light background for contrast */
+    text-align: center;
+    height: 750px; /* Much taller height */
+    overflow: hidden; /* Disable scrolling */
+}
+
+.ranking {
+    color: lightgray;
+    font-size: 1.5em; /* Slightly smaller font size */
+    width: 90%; /* Almost as wide as the container */
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 10px;
+    border-radius: 10px; /* Rounded borders */
+    background: rgba(255, 255, 255, 0.1); /* Optional: light background for contrast */
+    text-align: center;
+    height: 750px; /* Much taller height */
+    overflow: hidden; /* Disable scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ranking-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr; /* Adjust the fractions as needed */
+    width: 100%;
+    padding: 10px 0;
+}
+
+.rank, .name, .points {
+    text-align: left;
+}
+
+.rank {
+    text-align: center;
+}
+
+.go-back-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.go-back-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #d11a1a;
+}

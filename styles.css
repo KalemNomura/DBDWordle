@@ -1,3 +1,5 @@
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -10,17 +12,21 @@ body, html {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Adjust as needed */
+    flex-direction: column; /* Ensure elements stack vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center elements horizontally */
 }
+
+
 .container {
     width: 500px;
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin: 40px 0 0 0; /* Adjust margin-top to move closer to the top */
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -47,6 +53,7 @@ body, html {
     color: #ffcc00;
 }
 .input-container {
+    position: relative; /* Add this line */
     margin-bottom: 20px;
 }
 .input-container input {
@@ -54,7 +61,7 @@ body, html {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .input-container button {
     padding: 10px 20px;
@@ -88,4 +95,278 @@ body, html {
 .flag {
     height: auto; /* Set a fixed height for the flag */
     width: 100px; /* Maintain aspect ratio */
+}
+
+.main {
+    width: 1800px; /* Match the width of the container */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px 0; /* Add vertical spacing */
+    padding: 20px; /* Add padding for content */
+    height: 500px; /* Set a fixed height for the main div */
+
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#currentStreak {
+    display: none; /* Initially hidden */
+    font-size: 1.2em;
+    color: #ffcc00;
+    margin-top: 20px;
+}
+
+.search-result {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Add this line */
+    color: black;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.search-result:last-child {
+    border-bottom: none; /* Add this line */
+}
+
+.search-result p {
+    margin: 5px 0;
+}
+
+.search-result .portrait {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#suggestions {
+    position: absolute; /* Add this line */
+    top: 100%; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translateX(-50%); /* Adjust position to center */
+    width: 85%; /* Add this line */
+    background: white; /* Change background to white */
+    color: black; /* Change text color to black */
+    z-index: 10; /* Add this line */
+    border-radius: 5px; /* Add this line */
+    max-height: 200px; /* Add this line */
+    overflow-y: auto; /* Add this line */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#suggestions::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+#suggestions {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.search-result:hover {
+    background-color: rgba(6, 6, 6, 0.40); /* Change background on hover */
+    color: black; /* Keep text color black */
+}
+
+.tabla {
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+    margin: 20px;
+}
+
+table {
+    margin: 0; /* Center the table within the parent div */
+    border-collapse: separate;
+    border-spacing: 15px;
+    font-size: 1.2rem;
+}
+
+th {
+    border-bottom: 4px solid;
+    padding: 0px; /* Reduce padding to move closer to the top */
+    margin-top: 0; /* Ensure no margin at the top */
+    width: 200px;
+    text-align: center; /* Center text within th */
+}
+
+td{
+    border: 2px solid;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 0; /* Elimina el espacio interno en las celdas */
+    vertical-align: middle; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el contenido horizontalmente */
+
+}
+
+tbody {
+    display: block;
+    max-height: 326px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
+
+/* Hide scrollbar for WebKit browsers */
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+tbody {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Ensure table headers and cells align correctly */
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.stopwatch {
+    position: absolute;
+    top: 70px;
+    left: 20%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 400px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.7em;
+    z-index: 5;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    display: none; /* Initially hidden */
+}
+
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #d11a1a;
+}
+
+.shop {
+    position: absolute;
+    top: 40px;
+    left: 80%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 450px;
+    height: 285px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 10px 10px 10px; 
+    border-radius: 10px;
+    color: white;
+    font-size: 1.7em;
+    z-index: 5;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    display: none; /* Initially hidden */
+}
+
+.shopTitle {
+    font-size: 1.4em;
+  
+}
+
+/* Change background color to white when hovered and selected */
+.search-result:hover.selected {
+    background-color: white; /* Change background to white on hover */
+}
+
+.shop-text {
+    display: inline; /* Display text inline with the icons */
+    margin: 0; /* Remove default margin */
+    vertical-align: middle; /* Align text with the icons */
+    font-size: 0.8em; /* Reduced from 1.5em */
+}
+
+.shop-text:hover {
+    cursor: default; /* Change cursor to text select on hover */
+}
+
+.search-result.selected {
+    background-color: #d3d3d3; /* Set background color for selected item */
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
 }
