@@ -29,10 +29,6 @@ This is because the game detects the protocol and requires a secure (HTTPS) or l
 
 ## Contributing
 Feel free to fork this repository and submit pull requests with improvements or bug fixes!
-
-## License
-This project is licensed under a custom Lisence. See the `LICENSE` file for more details.
-
 ---
 
 ### **Happy Wordling!** 🎉
