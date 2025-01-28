@@ -1,5 +1,3 @@
-
-
 body, html {
     margin: 0;
     padding: 0;
@@ -8,15 +6,14 @@ body, html {
     font-family: Arial, sans-serif;
     color: white;
     background-color: #000;
-    background-image: url('imgs/background.webp'); /* Updated path */
+    background-image: url('imgs/background.webp'); 
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column; /* Ensure elements stack vertically */
-    justify-content: flex-start; /* Align items to the start */
-    align-items: center; /* Center elements horizontally */
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
 }
-
 
 .container {
     width: 500px;
@@ -24,7 +21,7 @@ body, html {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    margin: 40px 0 0 0; /* Adjust margin-top to move closer to the top */
+    margin: 40px 0 0 0; 
 }
 
 .logo {
@@ -34,7 +31,7 @@ body, html {
     font-size: 3em;
     font-weight: bold;
     color: #ffcc00;
-    margin-bottom: 10px; /* Adjusted */
+    margin-bottom: 10px; 
 }
 .logo img {
     height: auto;
@@ -53,7 +50,7 @@ body, html {
     color: #ffcc00;
 }
 .input-container {
-    position: relative; /* Add this line */
+    position: relative; 
     margin-bottom: 20px;
 }
 .input-container input {
@@ -93,24 +90,23 @@ body, html {
     font-family: Roboto;
 }
 .flag {
-    height: auto; /* Set a fixed height for the flag */
-    width: 100px; /* Maintain aspect ratio */
+    height: auto; 
+    width: 100px; 
 }
 
 .main {
-    width: 1800px; /* Match the width of the container */
+    width: 1800px; 
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    margin: 20px 0; /* Add vertical spacing */
-    padding: 20px; /* Add padding for content */
-    height: 500px; /* Set a fixed height for the main div */
+    margin: 20px 0; 
+    padding: 20px; 
+    height: 500px; 
 
 }
 
-/* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -141,7 +137,7 @@ body, html {
 }
 
 #currentStreak {
-    display: none; /* Initially hidden */
+    display: none; 
     font-size: 1.2em;
     color: #ffcc00;
     margin-top: 20px;
@@ -149,13 +145,13 @@ body, html {
 
 .search-result {
     padding: 10px;
-    border-bottom: 1px solid #ccc; /* Add this line */
+    border-bottom: 1px solid #ccc; 
     color: black;
-    cursor: pointer; /* Add cursor pointer */
+    cursor: pointer; 
 }
 
 .search-result:last-child {
-    border-bottom: none; /* Add this line */
+    border-bottom: none; 
 }
 
 .search-result p {
@@ -170,42 +166,42 @@ body, html {
 }
 
 #suggestions {
-    position: absolute; /* Add this line */
-    top: 100%; /* Add this line */
-    left: 50%; /* Add this line */
-    transform: translateX(-50%); /* Adjust position to center */
-    width: 85%; /* Add this line */
-    background: white; /* Change background to white */
-    color: black; /* Change text color to black */
-    z-index: 10; /* Add this line */
-    border-radius: 5px; /* Add this line */
-    max-height: 200px; /* Add this line */
-    overflow-y: auto; /* Add this line */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 85%; 
+    background: white; 
+    color: black; 
+    z-index: 10; 
+    border-radius: 5px; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 #suggestions::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    display: none; 
 }
 
 #suggestions {
-    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 
 .search-result:hover {
-    background-color: rgba(6, 6, 6, 0.40); /* Change background on hover */
-    color: black; /* Keep text color black */
+    background-color: rgba(6, 6, 6, 0.40); 
+    color: black; 
 }
 
 .tabla {
     display: flex;
-    justify-content: center; /* Center the table horizontally */
+    justify-content: center; 
     margin: 20px;
 }
 
 table {
-    margin: 0; /* Center the table within the parent div */
+    margin: 0; 
     border-collapse: separate;
     border-spacing: 15px;
     font-size: 1.2rem;
@@ -213,10 +209,10 @@ table {
 
 th {
     border-bottom: 4px solid;
-    padding: 0px; /* Reduce padding to move closer to the top */
-    margin-top: 0; /* Ensure no margin at the top */
+    padding: 0px; 
+    margin-top: 0; 
     width: 200px;
-    text-align: center; /* Center text within th */
+    text-align: center; 
 }
 
 td{
@@ -224,30 +220,27 @@ td{
     border-radius: 5px;
     height: 100px;
     width: 100px;
-    padding: 0; /* Elimina el espacio interno en las celdas */
-    vertical-align: middle; /* Centra el contenido verticalmente */
-    text-align: center; /* Centra el contenido horizontalmente */
+    padding: 0; 
+    vertical-align: middle; 
+    text-align: center; 
 
 }
 
 tbody {
     display: block;
-    max-height: 326px; /* Adjust the height as needed */
+    max-height: 326px; 
     overflow-y: auto;
 }
 
-/* Hide scrollbar for WebKit browsers */
 tbody::-webkit-scrollbar {
     display: none;
 }
 
-/* Hide scrollbar for IE, Edge, and Firefox */
 tbody {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 
-/* Ensure table headers and cells align correctly */
 thead, tbody tr {
     display: table;
     width: 100%;
@@ -257,7 +250,7 @@ thead, tbody tr {
 .stopwatch {
     position: absolute;
     top: 70px;
-    left: 20%; /* Center horizontally */
+    left: 20%; 
     transform: translateX(-50%);
     width: 400px;
     height: 250px;
@@ -267,12 +260,12 @@ thead, tbody tr {
     color: white;
     font-size: 1.7em;
     z-index: 5;
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center the text */
-    display: none; /* Initially hidden */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    display: none; 
 }
 
 #display {
@@ -298,7 +291,7 @@ button:hover {
 .shop {
     position: absolute;
     top: 40px;
-    left: 80%; /* Center horizontally */
+    left: 80%; 
     transform: translateX(-50%);
     width: 450px;
     height: 285px;
@@ -308,12 +301,12 @@ button:hover {
     color: white;
     font-size: 1.7em;
     z-index: 5;
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items to the start */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center the text */
-    display: none; /* Initially hidden */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    text-align: center; 
+    display: none; 
 }
 
 .shopTitle {
@@ -321,27 +314,26 @@ button:hover {
   
 }
 
-/* Change background color to white when hovered and selected */
 .search-result:hover.selected {
-    background-color: white; /* Change background to white on hover */
+    background-color: white; 
 }
 
 .shop-text {
-    display: inline; /* Display text inline with the icons */
-    margin: 0; /* Remove default margin */
-    vertical-align: middle; /* Align text with the icons */
-    font-size: 0.8em; /* Reduced from 1.5em */
+    display: inline; 
+    margin: 0; 
+    vertical-align: middle; 
+    font-size: 0.8em; 
 }
 
 .shop-text:hover {
-    cursor: default; /* Change cursor to text select on hover */
+    cursor: default; 
 }
 
 .search-result.selected {
-    background-color: #d3d3d3; /* Set background color for selected item */
+    background-color: #d3d3d3; 
 }
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;

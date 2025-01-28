@@ -1,9 +1,8 @@
 // Function to update the current streak
 function updateCurrentStreak(streak) {
-    // Get the element by its ID
+
     var currentStreakElement = document.getElementById('currentStreak');
     
-    // Update the inner HTML of the element
     currentStreakElement.innerHTML = 'Your current number of correct answers is ' + streak;
 }
 

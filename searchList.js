@@ -39,7 +39,7 @@ function handleKeyDown(event) {
         updateSelection(suggestionItems);
     } else if (event.key === 'Enter' && currentIndex >= 0) {
         event.target.value = suggestionItems[currentIndex].textContent;
-        suggestions.innerHTML = ''; // Clear suggestions
+        suggestions.innerHTML = '';
     }
 }
 

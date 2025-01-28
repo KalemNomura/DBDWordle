@@ -14,10 +14,10 @@ async function loadKillers() {
         // Generate a random number between 1 and 27
         const randomNumber = Math.floor(Math.random() * 27) + 1;
 
-        // Get the entity with the random number
+        // Get the killer with the random number
         const selectedKiller = data.find(killer => killer.number === randomNumber);
 
-        // Save the selected entity's information in a variable
+        // Save the killer in the killerInfo variable
         killerInfo = selectedKiller;
     } catch (error) {
         console.error('Error loading killers.json:', error);
@@ -31,7 +31,7 @@ function handleKeyPress(event) {
     }
 }
 
-// Function to check the input value against the selected killer's name
+// Function to check the input value with the KillerInfo
 async function checkAnswer() {
     const answerInputElement = document.getElementById('answer');
     const answerInput = answerInputElement.value.toLowerCase();
@@ -40,7 +40,7 @@ async function checkAnswer() {
     if (validNames.includes(answerInput)) {
         const enteredKiller = allKillers.find(killer => killer.name.toLowerCase() === answerInput);
         if (killerInfo && answerInput === killerInfo.name.toLowerCase()) {
-            updatePoints(50); // Add 50 points for a correct answer
+            updatePoints(50); // Points per Correct Answer
             updateStreak(true); // Update streak for correct answer
             localStorage.setItem('numberOfTries', numberOfTries); // Store number of tries
             window.location.href = 'youWin.html';
@@ -50,16 +50,15 @@ async function checkAnswer() {
             updateStreak(false); // Do not reset streak for incorrect answer
         }
     } else {
-        console.log('Invalid value');
         updateStreak(false); // Do not reset streak for invalid answer
     }
     numberOfTries++; // Increment number of tries
 
-    // Clear the input field after making a guess
+    //Reset Imput
     answerInputElement.value = '';
 }
 
-// Sound System
+// Sound System for each 'td' added 
 const sound = new Audio('./audios/checkAudio.mp3');
 
 function addKillerToTable(killer) {
@@ -77,7 +76,7 @@ function addKillerToTable(killer) {
     const img = document.createElement('img');
     img.src = killer.imgs.portrait;
     img.alt = killer.name;
-    img.style.width = '100px'; // Adjust the size as needed
+    img.style.width = '100px'; 
     imgCell.appendChild(img);
     row.appendChild(imgCell);
 
@@ -123,13 +122,11 @@ function updatePoints(value) {
     document.getElementById('points').textContent = `Points: ${points}`;
 }
 
-// Function to update streak
+// Function to update the streak
 function updateStreak(isCorrect) {
     if (isCorrect) {
         streak += 1;
-        console.log('Correct answer. Streak incremented:', streak);
     } else {
-        console.log('Incorrect answer. Streak unchanged:', streak);
     }
     localStorage.setItem('streak', streak);
     updateCurrentStreak(streak);
