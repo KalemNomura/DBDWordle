@@ -2,6 +2,14 @@ let stopwatchInterval;
 let elapsedTime = 0;
 let isRunning = false;
 
+window.onload = () => {
+    const storedTime = localStorage.getItem('elapsedTime');
+    if (storedTime) {
+        elapsedTime = parseInt(storedTime, 10);
+        updateDisplay();
+    }
+};
+
 function toggleStopwatch() {
     const stopwatchDiv = document.querySelector('.stopwatch');
     if (stopwatchDiv.style.display === 'none' || stopwatchDiv.style.display === '') {
