@@ -193,10 +193,7 @@ body, html {
     scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
 
-.search-result:hover {
-    background-color: rgba(6, 6, 6, 0.40); /* Change background on hover */
-    color: black; /* Keep text color black */
-}
+
 
 .tabla {
     display: flex;
