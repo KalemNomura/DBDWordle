@@ -9,7 +9,7 @@ function toggleShop() {
 
 function updateBackground(imagePath) {
     const points = parseInt(localStorage.getItem('points')) || 0;
-    const defaultImagePath = '/imgs/background.webp'; // Replace with the actual default image path
+    const defaultImagePath = '/src/imgs/background.webp'; // Replace with the actual default image path
 
     // Normalize paths by removing leading slashes
     const normalizedImagePath = imagePath.replace(/^\//, '');
@@ -44,8 +44,8 @@ document.getElementById('closePointsModal').addEventListener('click', () => {
 
 // Check localStorage for a saved background image on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedImagePath = localStorage.getItem('backgroundImage');
-    if (savedImagePath) {
-        document.body.style.backgroundImage = `url('${savedImagePath}')`;
+    const savedBackgroundImage = localStorage.getItem('backgroundImage');
+    if (savedBackgroundImage) {
+        document.body.style.backgroundImage = `url('${savedBackgroundImage}')`;
     }
 });

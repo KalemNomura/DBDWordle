@@ -6,7 +6,7 @@
     <link rel="icon" href="imgs/Dead-by-Daylight-Logo-2016-2021.webp" type="image/x-icon"/>
     <script src="https://kit.fontawesome.com/2aa25eb160.js" crossorigin="anonymous"></script>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="youWin.css"> 
+    <link rel="stylesheet" href="/src/CSS/youWin.css"> 
     <title>You Win</title>
 </head>
 <body>
@@ -26,9 +26,13 @@
             const numberOfTries = localStorage.getItem('numberOfTries') || 0;
             document.getElementById('numberOfTries').textContent = `Number of Tries: ${numberOfTries}`;
         });
+
+        // Dummy function to avoid ReferenceError
+        function updateCurrentStreak(streak) {
+            console.log(`Dummy updateCurrentStreak called with streak: ${streak}`);
+        }
     </script>
-    <script src="buttonMove.js"></script>
-    <script src="displayTime.js"></script> 
-    <script src="correctKiller.js"></script> 
+    <script src="/src/JavaScript/buttonMove.js"></script>
+    <script src="/src/JavaScript/correctKiller.js"></script> 
 </body>
 </html>

@@ -5,12 +5,12 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>DbDle</title>
     <!-- Favicon implementation -->
-    <link rel="icon" href="imgs/Dead-by-Daylight-Logo-2016-2021.webp" type="image/x-icon"/>
+    <link rel="icon" href="/src/imgs/Dead-by-Daylight-Logo-2016-2021.webp" type="image/x-icon"/>
     <script src="https://kit.fontawesome.com/2aa25eb160.js" crossorigin="anonymous"></script>
     <!-- CSS for fontawesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="/src/CSS/styles.css"/> 
 </head>
 <body>
 
@@ -25,14 +25,14 @@
 
     <div class="container">
         <div class="logo">
-            <img alt="DbDle Logo" src="imgs/image.webp"/> 
+            <img alt="DbDle Logo" src="/src/imgs/image.webp"/> 
             <p class="mainTitle">DbDle</p>
         </div>
         <div class="icons">
             <i id="rulesButton" class="fas fa-question-circle"></i>
             <i class="fas fa-users" id="playerCount"></i>
             <i class="fas fa-fire"></i>
-            <i class="fas fa-chart-bar" onclick="window.location.href='leaderboard.html'"></i>
+            <i class="fas fa-chart-bar" onclick="window.location.href='/src/html/leaderboard.html'"></i>
             <i class="fa-solid fa-stopwatch" onclick="toggleStopwatch()"></i>
             <i class="fa-solid fa-cart-shopping" onclick="toggleShop()"></i>
         </div>
@@ -50,11 +50,11 @@
     <div class="shop">
         <h2 class="shopTitle">Background Shop</h2>
         <div> 
-            <p onclick="updateBackground('imgs/background.webp')" class="shop-text" id="legion">✧ Default ✧</p><br>
-            <p onclick="updateBackground('imgs/Legionbg.webp')" class="shop-text" id="legion">✧ The Legion (100 points) ✧</p><br>
-            <p onclick="updateBackground('imgs/Onibg.webp')" class="shop-text" id="oni">✧ The Oni (100 points) ✧</p><br>
-            <p onclick="updateBackground('imgs/Spiritbg.webp')" class="shop-text" id="spirit">✧ The Spirit (100 points) ✧</p><br>
-            <p onclick="updateBackground('imgs/Trapperbg.webp')" class="shop-text" id="trapper">✧ The Trapper (100 points) ✧</p><br>
+            <p onclick="updateBackground('/src/imgs/background.webp')" class="shop-text" id="default">✧ Default ✧</p><br>
+            <p onclick="updateBackground('/src/imgs/Legionbg.webp')" class="shop-text" id="legion">✧ The Legion (100 points) ✧</p><br>
+            <p onclick="updateBackground('/src/imgs/Onibg.webp')" class="shop-text" id="oni">✧ The Oni (100 points) ✧</p><br>
+            <p onclick="updateBackground('/src/imgs/Spiritbg.webp')" class="shop-text" id="spirit">✧ The Spirit (100 points) ✧</p><br>
+            <p onclick="updateBackground('/src/imgs/Trapperbg.webp')" class="shop-text" id="trapper">✧ The Trapper (100 points) ✧</p><br>
         </div>
     </div>
 
@@ -96,14 +96,14 @@
         </div>
     </div>
 
-    <script src="instructions.js"></script>
-    <script src="correctKiller.js" defer></script>
-    <script src="randomPlayerCount.js"></script>
-    <script src="answerStreak.js"></script>
-    <script src="killerFetch.js" type="module"></script>
-    <script src="searchList.js" type="module"></script> 
-    <script src="stopwatch.js"></script>
-    <script src="shop.js"></script>
+    <script src="/src/JavaScript/instructions.js"></script>
+    <script src="/src/JavaScript/correctKiller.js" defer></script>
+    <script src="/src/JavaScript/randomPlayerCount.js"></script>
+    <script src="/src/JavaScript/answerStreak.js"></script>
+    <script src="/src/JavaScript/killerFetch.js" type="module"></script>
+    <script src="/src/JavaScript/searchList.js" type="module"></script> 
+    <script src="/src/JavaScript/stopwatch.js"></script>
+    <script src="/src/JavaScript/shop.js"></script>
 
 </body>
 </html>

@@ -7,7 +7,7 @@ let numberOfTries = 0;
 // Load the killers.json file
 async function loadKillers() {
     try {
-        const response = await fetch('./killers.json');
+        const response = await fetch('/src/json/killers.json');
         const data = await response.json();
         allKillers = data;
 
@@ -59,7 +59,7 @@ async function checkAnswer() {
 }
 
 // Sound System for each 'td' added 
-const sound = new Audio('./audios/checkAudio.mp3');
+const sound = new Audio('/src/audios/checkAudio.mp3');
 
 function addKillerToTable(killer) {
     const tbody = document.querySelector('.tabla tbody');
@@ -135,7 +135,12 @@ function updateStreak(isCorrect) {
 // Initialize points and streak from localStorage
 document.addEventListener('DOMContentLoaded', () => {
     points = parseInt(localStorage.getItem('points')) || 0;
-    document.getElementById('points').textContent = `Points: ${points}`;
+    const pointsElement = document.getElementById('points');
+    if (pointsElement) {
+        pointsElement.textContent = `Points: ${points}`;
+    } else {
+        console.error("Element with ID 'points' not found.");
+    }
     streak = parseInt(localStorage.getItem('streak')) || 0;
     updateCurrentStreak(streak);
 });

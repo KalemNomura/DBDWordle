@@ -38,8 +38,10 @@ function handleKeyDown(event) {
         currentIndex = (currentIndex - 1 + suggestionItems.length) % suggestionItems.length;
         updateSelection(suggestionItems);
     } else if (event.key === 'Enter' && currentIndex >= 0) {
-        event.target.value = suggestionItems[currentIndex].textContent;
-        suggestions.innerHTML = '';
+        if (suggestionItems[currentIndex]) {
+            event.target.value = suggestionItems[currentIndex].textContent;
+            suggestions.innerHTML = '';
+        }
     }
 }
 

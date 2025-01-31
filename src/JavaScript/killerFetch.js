@@ -1,6 +1,6 @@
 export async function fetchKillersData() {
     try {
-        const response = await fetch('./killers.json');
+        const response = await fetch('/src/json/killers.json');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
