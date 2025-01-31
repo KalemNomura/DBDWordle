@@ -6,6 +6,8 @@
 
 This is because the game detects the protocol and requires a secure (HTTPS) or local (HTTP via Live Server) environment to function properly. Without using Live Server, you might encounter issues with the browser blocking content due to an "insecure protocol" error.
 
+### ⚠️ Important: Este Wordle tiene volumen por lo que es recomendable usar cascos
+
 ---
 
 ## How to Set Up Live Server
