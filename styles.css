@@ -50,7 +50,11 @@ body, html {
     color: #ffcc00;
 }
 .input-container {
+<<<<<<< HEAD
     position: relative; 
+=======
+    position: relative;  
+>>>>>>> Functionality
     margin-bottom: 20px;
 }
 .input-container input {
@@ -145,6 +149,7 @@ body, html {
 
 .search-result {
     padding: 10px;
+<<<<<<< HEAD
     border-bottom: 1px solid #ccc; 
     color: black;
     cursor: pointer; 
@@ -152,6 +157,15 @@ body, html {
 
 .search-result:last-child {
     border-bottom: none; 
+=======
+    border-bottom: 1px solid #ccc;  
+    color: black;
+    cursor: pointer; /*cursor pointer */
+}
+
+.search-result:last-child {
+    border-bottom: none;  
+>>>>>>> Functionality
 }
 
 .search-result p {
@@ -166,6 +180,7 @@ body, html {
 }
 
 #suggestions {
+<<<<<<< HEAD
     position: absolute; 
     top: 100%; 
     left: 50%; 
@@ -177,6 +192,19 @@ body, html {
     border-radius: 5px; 
     max-height: 200px; 
     overflow-y: auto; 
+=======
+    position: absolute;  
+    top: 100%;  
+    left: 50%;  
+    transform: translateX(-50%); 
+    width: 85%;  
+    background: white; 
+    color: black; 
+    z-index: 10;  
+    border-radius: 5px;  
+    max-height: 200px;  
+    overflow-y: auto;  
+>>>>>>> Functionality
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
@@ -187,11 +215,14 @@ body, html {
 #suggestions {
     -ms-overflow-style: none;  
     scrollbar-width: none;  
+<<<<<<< HEAD
 }
 
 .search-result:hover {
     background-color: rgba(6, 6, 6, 0.40); 
     color: black; 
+=======
+>>>>>>> Functionality
 }
 
 .tabla {
@@ -210,7 +241,11 @@ table {
 th {
     border-bottom: 4px solid;
     padding: 0px; 
+<<<<<<< HEAD
     margin-top: 0; 
+=======
+    margin-top: 0;
+>>>>>>> Functionality
     width: 200px;
     text-align: center; 
 }
@@ -221,8 +256,13 @@ td{
     height: 100px;
     width: 100px;
     padding: 0; 
+<<<<<<< HEAD
     vertical-align: middle; 
     text-align: center; 
+=======
+    vertical-align: middle;
+    text-align: center;
+>>>>>>> Functionality
 
 }
 
@@ -263,9 +303,15 @@ thead, tbody tr {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
+<<<<<<< HEAD
     align-items: center; 
     text-align: center; 
     display: none; 
+=======
+    align-items: center;
+    text-align: center; 
+    display: none;
+>>>>>>> Functionality
 }
 
 #display {
@@ -304,7 +350,11 @@ button:hover {
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start; 
+<<<<<<< HEAD
     align-items: center; 
+=======
+    align-items: center;
+>>>>>>> Functionality
     text-align: center; 
     display: none; 
 }
@@ -314,9 +364,13 @@ button:hover {
   
 }
 
+<<<<<<< HEAD
 .search-result:hover.selected {
     background-color: white; 
 }
+=======
+
+>>>>>>> Functionality
 
 .shop-text {
     display: inline; 
@@ -329,11 +383,16 @@ button:hover {
     cursor: default; 
 }
 
+<<<<<<< HEAD
 .search-result.selected {
     background-color: #d3d3d3; 
 }
 .modal {
     display: none; 
+=======
+.modal {
+    display: none;
+>>>>>>> Functionality
     position: fixed;
     top: 0;
     left: 0;
@@ -361,4 +420,20 @@ button:hover {
     padding: 8px 16px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.search-result:hover {
+    background-color: #d3d3d3;
+    color: black; 
+}
+
+/* Ask Alberto Conflict with color */
+
+
+.search-result.selected {
+    background-color: #d3d3d3; 
+}
+
+.search-result.selected.hovered {
+    background-color: white;
 }
