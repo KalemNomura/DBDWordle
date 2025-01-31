@@ -314,10 +314,7 @@ button:hover {
   
 }
 
-/* Ask Alberto */
-.search-result:hover.selected {
-    background-color: white; 
-}
+
 
 .shop-text {
     display: inline; 
@@ -330,9 +327,6 @@ button:hover {
     cursor: default; 
 }
 
-.search-result.selected {
-    background-color: #d3d3d3; 
-}
 .modal {
     display: none;
     position: fixed;
@@ -362,4 +356,18 @@ button:hover {
     padding: 8px 16px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.search-result:hover {
+    background-color: rgba(6, 6, 6, 0.20); 
+    color: black; 
+}
+
+/* Ask Alberto Conflict with color */
+.search-result:hover.selected {
+    background-color: white; 
+}
+
+.search-result.selected {
+    background-color: #d3d3d3; 
 }
