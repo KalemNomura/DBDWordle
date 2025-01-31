@@ -73,6 +73,35 @@ document.getElementById('suggestions').addEventListener('click', function(event)
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const suggestions = document.getElementById('suggestions');
+
+    suggestions.addEventListener('mouseover', function(event) {
+        const target = event.target.closest('.search-result');
+        if (target) {
+            target.classList.add('hovered');
+        }
+    });
+
+    suggestions.addEventListener('mouseout', function(event) {
+        const target = event.target.closest('.search-result');
+        if (target) {
+            target.classList.remove('hovered');
+        }
+    });
+});
+
+document.getElementById('suggestions').addEventListener('click', function(event) {
+    const target = event.target.closest('.search-result');
+    if (target) {
+        const index = target.dataset.index;
+        const input = document.getElementById('answer');
+        input.value = filteredKillers[index].name;
+        suggestions.innerHTML = ''; // Hide suggestions after selection
+        input.focus(); // Keep focus on the input
+    }
+});
+
 async function init() {
     killers = await fetchKillersData();
     // Additional initialization code if needed

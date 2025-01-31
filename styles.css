@@ -359,15 +359,17 @@ button:hover {
 }
 
 .search-result:hover {
-    background-color: rgba(6, 6, 6, 0.20); 
+    background-color: #d3d3d3;
     color: black; 
 }
 
 /* Ask Alberto Conflict with color */
-.search-result:hover.selected {
-    background-color: white; 
-}
+
 
 .search-result.selected {
     background-color: #d3d3d3; 
+}
+
+.search-result.selected.hovered {
+    background-color: white;
 }
